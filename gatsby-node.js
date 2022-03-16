@@ -9,12 +9,22 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           id
           link
+          content
+          title
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(tracedSVGOptions: {blackOnWhite: true})
+                }
+              }
+            }
+          }
         }
       }
     }
   `);
 
-  console.log(JSON.stringify(postPages));
   postPages.data.allWpPost.nodes.forEach((node) => {
     console.log(node);
     createPage({

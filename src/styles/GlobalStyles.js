@@ -21,12 +21,12 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: var(--black-color);
     }
-    h3 {
+    h2 {
     font-size: 32px;
     text-transform: uppercase;
     }
     p {
-    font-size: 18px;
+    font-size: 24px;
     }
     .container {
         max-width: 1440px;
